@@ -11,10 +11,22 @@ import { PlantsSingleTableStatusComponent } from './plants-single-table-status/p
 import { PlantsSingleDiagramOutputComponent } from './plants-single-diagram-output/plants-single-diagram-output.component';
 import { PlantsSingleDiagramStatusComponent } from './plants-single-diagram-status/plants-single-diagram-status.component';
 import { Constants } from './constants';
+import {LoginComponent} from "./login/login.component";
+import {AuthGuard} from "./core/auth/_guard/auth.guard";
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo : Constants.UrlLogin,
+    pathMatch: 'full'
+  },
+  {
+    path: Constants.UrlLogin,
+    component: LoginComponent
+  },
   { 
      path: Constants.UrlAllUnits,
+     canActivate: [AuthGuard],
      component: MainlayoutComponent,
      children: [
       {

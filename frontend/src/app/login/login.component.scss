@@ -1,0 +1,26 @@
+.item-1 {
+  background-image: url("../../assets/back-log/bg-4.jpg");
+  height: 100vh;
+}
+.logo-title {
+  margin-top: 30vh;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+.login-form {
+  margin-top: 30vh;
+  text-align: center;
+  padding: 50px;
+}
+.login-form mat-form-field {
+  width: 100%;
+}
+mat-icon {
+  cursor: pointer;
+}
+.login-form button {
+  width: 100%;
+  background: #b5ff7c;
+  border-radius: 10px;
+}

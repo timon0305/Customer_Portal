@@ -1,4 +1,5 @@
 export class Constants {
+    public static readonly  UrlLogin:string                 = "Login";
     public static readonly UrlAllUnits:string               = "Alle_Anlagen";
     public static readonly UrlSingleUnit:string             = "Anlage";
 
@@ -18,4 +19,3 @@ export class Constants {
 
 
 }
- 
