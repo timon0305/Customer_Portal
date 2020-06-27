@@ -1,0 +1,65 @@
+Tipps:
+ctrl+shift+p or F1. Then write: duplicate workspace
+https://angular.io/tutorial/toh-pt5
+
+
+
+
+#############################################
+Installation:
+
+
+ng new kundenportal
+cd kundenportal
+git config --global user.email "c.lehne@opernikus.de"
+git config --global user.name "C.Lehne"
+npm i @angular/flex-layout
+
+ng add @angular/material
+ng generate @angular/material:navigation mainlayout
+ng generate module app-routing --flat --module=app
+ng generate component menu-list-item
+ng generate service nav
+ng generate @angular/material:dashboard plants-all-table-output
+ng generate @angular/material:dashboard plants-all-table-status
+ng generate @angular/material:dashboard plants-all-diagram-output
+ng generate @angular/material:dashboard plants-all-diagram-status
+ng generate @angular/material:dashboard plants-single-table-output
+ng generate @angular/material:dashboard plants-single-table-status
+ng generate @angular/material:dashboard plants-single-diagram-output
+ng generate @angular/material:dashboard plants-single-diagram-status
+
+ng generate @angular/material:table  tables
+
+
+#############################################
+Production build
+
+-html base href korrekt setzen
+cd kundenportal
+ng build --prod
+-auf Server uebertragen
+-server.htaccess.txt ->  server/kundenportal/.htaccess 
+
+ng build --watch
+lite-server --baseDir="dist/project-name"
+
+
+
+#############################################
+Demo:
+ng generate component emi-installations
+ng generate component emi-installationng
+ng generate @angular/material:navigation dashboard
+ng generate @angular/material:dashboard schemaDashboard
+ng serve
+ng generate component heroes
+ng generate component hero-detail
+ng generate component messages
+ng generate service hero 
+ng generate service message
+#flat puts file diretly in app folder #modul registriert in app
+ng generate component dashboard
+#simulate in app web access simulation
+npm install angular-in-memory-web-api --save
+ng generate service InMemoryData

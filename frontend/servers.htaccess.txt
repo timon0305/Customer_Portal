@@ -1,0 +1,35 @@
+
+
+RewriteEngine On
+
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+# if a directory or a file exists, use it directly
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^(.*) kundenportal/index.html [NC,L]
+
+
+
+#RewriteCond %{REQUEST_URI} !^/api/.*$
+#RewriteRule ^ - [L]
+
+#RewriteCond %{REQUEST_URI} !^/api/.*$
+#RewriteRule ^ /kundenportal/index.html [L]
+
+
+## If the requested resource doesn't exist, use index.html
+#RewriteRule ^ /kundenportal/index.html [NC,L]
+
+
+#RewriteCond %{REQUEST_FILENAME} -s [OR]
+#RewriteCond %{REQUEST_FILENAME} -l [OR]
+#RewriteCond %{REQUEST_FILENAME} -d
+#RewriteCond %{REQUEST_URI} /api
+
+# otherwise forward it to index.html 
+#RewriteRule ^.*$ - [NC,L]
+#RewriteRule ^kundenportal/. /kundenportal/index.html [NC,L]
