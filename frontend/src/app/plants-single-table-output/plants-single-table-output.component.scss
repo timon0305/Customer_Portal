@@ -19,3 +19,22 @@
 .dashboard-card-content {
   text-align: center;
 }
+.plant-single-table-header {
+  background: #ececec;
+}
+.plant-single-table-header  h1 {
+  padding: 10px;
+  margin-bottom: 0!important;
+}
+.plant-single-table-header mat-icon {
+  vertical-align: middle;
+  color: blue;
+}
+.plant-single-search-box {
+  padding: 0 20px 20px;
+  text-align: center;
+}
+.plant-single-search-box .item {
+  display: flex;
+  justify-content: space-around;
+}

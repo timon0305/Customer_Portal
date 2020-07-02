@@ -13,6 +13,8 @@ import { PlantsSingleDiagramStatusComponent } from './plants-single-diagram-stat
 import { Constants } from './constants';
 import {LoginComponent} from "./login/login.component";
 import {AuthGuard} from "./core/auth/_guard/auth.guard";
+import {PropertyComponent} from "./property/property.component";
+import {HelpComponent} from "./help/help.component";
 
 const routes: Routes = [
   {
@@ -69,8 +71,26 @@ const routes: Routes = [
 
      ]
   },
-  { path: Constants.UrlHelp, component: MainlayoutComponent, pathMatch: 'full'},
-  { path: Constants.UrlProperties, component: MainlayoutComponent, pathMatch: 'full'},
+  { path:
+    Constants.UrlHelp,
+    component: MainlayoutComponent,
+    children: [
+      {
+        path: '',
+        component: HelpComponent
+      }
+    ]
+  },
+  {
+    path: Constants.UrlProperties,
+    component: MainlayoutComponent,
+    children: [
+      {
+        path: '',
+        component: PropertyComponent
+      }
+    ]
+  },
 
   //catchall
   { path: '**',   redirectTo: Constants.UrlAllUnitsTableOutput }
@@ -80,7 +100,7 @@ const routes: Routes = [
 
 @NgModule({
 //  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

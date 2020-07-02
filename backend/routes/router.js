@@ -43,7 +43,7 @@ router.post('/sign-up', (req, res, next) => {
 
 });
 
-router.post('/login', (req, res, next) => {
+router.post('/authentication', (req, res, next) => {
    const body = req.body;
    getUserByName(body, (err, results) => {
       if (err) {
@@ -53,7 +53,7 @@ router.post('/login', (req, res, next) => {
         })
       }
       if (!results) {
-         return res.status(404).json({
+         return res.status(200).json({
              success : false,
              data: null,
              msg: `User doesn't not exist`
@@ -68,11 +68,12 @@ router.post('/login', (req, res, next) => {
            });
            return res.status(200).json({
                success : true,
+               data: results,
                msg: 'Login Successfully',
                token: jsontoken,
            })
         } else {
-           return res.status(401).json({
+           return res.status(200).json({
                success: false,
                msg: 'Invalid Password'
            })

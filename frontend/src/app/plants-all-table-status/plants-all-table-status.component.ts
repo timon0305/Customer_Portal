@@ -48,17 +48,6 @@ export class PlantsAllTableStatusComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit(): void{
-/*    
-    this.route.queryParams.subscribe(params => {
-      console.log("async queryparams " + JSON.stringify(params));
-    });
-    this.route.parent.params.subscribe(params => {
-        this.plantUniqName=params.uniqname;
-    this.mainlayout.updateTitle("Alle Anlagen Tabelle Status");
-    });
-
-*/
-
     this.mainlayout.updateTitle("Status aller Anlagen");
 
   }

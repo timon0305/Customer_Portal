@@ -5,7 +5,7 @@ import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute} from "@angular/router";
 import {map} from "rxjs/operators";
 
-const BASE_URL = 'http://localhost:5000/api/';
+const BASE_URL = 'http://localhost:5000/rest/api/';
 
 @Injectable({
   providedIn: 'root'
@@ -32,11 +32,12 @@ export class AuthService {
   }
 
   login(payload) : Observable<any> {
-    return this.http.post(BASE_URL + 'login', payload)
+    return this.http.post(BASE_URL + 'authentication', payload)
       .pipe(
         map(res => {
           if (res['success'] === true) {
-            localStorage.setItem('token', res['token'])
+            localStorage.setItem('token', res['token']);
+            localStorage.setItem('customerId', res['data']['id']);
           }
           return res;
         })

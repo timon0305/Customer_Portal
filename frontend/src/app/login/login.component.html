@@ -1,48 +1,53 @@
-<div class="container"
-     fxLayout
-     fxLayout.xs="column"
-     fxLayoutAlign="center"
-     fxLayoutGap="10px"
-     fxLayoutGap.xs="0">
-  <div class="item item-1" style="background-image: url('../../assets/back-log/bg-4.jpg');" fxFlex="50%">
-    <div class="logo-title">
-      <h1>Lorem Ipsum</h1>
-      <h3>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </h3>
+<div class="login-page">
+  <div class="container"
+       fxLayout
+       fxLayout.xs="column"
+       fxLayout.md="row"
+       fxLayout.lg="row"
+       fxLayoutAlign="center"
+       fxLayoutGap="0px"
+       fxLayoutGap.xs="0">
+    <div class=" item-1" style="background-image: url('../../assets/back-log/bg-4.jpg');" fxFlex="50%">
+      <div class="logo-title">
+        <h1>Lorem Ipsum</h1>
+        <h3>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </h3>
+      </div>
+    </div>
+    <div class="item item-2" fxFlex="50%">
+
+      <div class="login-form">
+        <img src="assets/logo/logo1.png" alt="">
+        <form class="login_submit" [formGroup]="login" (ngSubmit)="onSubmit()">
+          <mat-form-field class="example-full-width">
+            <mat-label>username</mat-label>
+            <input matInput placeholder="username" formControlName="username"
+                   [ngClass]="{'is-invalid': submitted && f.username.errors}">
+            <mat-error>
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">Username is required</div>
+                <div *ngIf="f.username.errors.minlength">Email must be at least 3 characters</div>
+              </div>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'"
+                   formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors}" autocomplete="on">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <mat-error>
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+            </mat-error>
+          </mat-form-field>
+          <br><br>
+          <button mat-flat-button type="submit">Login</button>
+        </form>
+      </div>
     </div>
   </div>
-  <div class="item item-2" fxFlex="50%">
 
-    <div class="login-form">
-      <img src="assets/logo/logo-mini-2-md.png" alt="">
-      <form class="login_submit" [formGroup]="login" (ngSubmit)="onSubmit()">
-        <mat-form-field class="example-full-width">
-          <mat-label>username</mat-label>
-          <input matInput placeholder="username" formControlName="username"
-                 [ngClass]="{'is-invalid': submitted && f.username.errors}">
-          <mat-error>
-            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-              <div *ngIf="f.username.errors.required">Username is required</div>
-              <div *ngIf="f.username.errors.minlength">Email must be at least 3 characters</div>
-            </div>
-          </mat-error>
-        </mat-form-field>
-
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'"
-                 formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors}" autocomplete="on">
-          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          <mat-error>
-            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-              <div *ngIf="f.password.errors.required">Password is required</div>
-              <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
-            </div>
-          </mat-error>
-        </mat-form-field>
-        <br><br>
-        <button mat-flat-button type="submit">Login</button>
-      </form>
-    </div>
-  </div>
 </div>

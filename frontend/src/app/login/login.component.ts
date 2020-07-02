@@ -4,7 +4,6 @@ import {Router} from "@angular/router";
 import {AuthService} from "../core/auth/_services/auth.service";
 import {first} from "rxjs/operators";
 import {Constants} from "../constants";
-import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-login',
@@ -17,7 +16,6 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private userService: AuthService,
     private _router: Router,
-    private toastr: ToastrService,
   ) { }
 
   login: FormGroup;
@@ -50,30 +48,10 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(res => {
          if (res['success'] === true) {
-           this.toastr.info(
-             '<span class="now-ui-icons ui-1_bell-53"></span> ' + res['msg'],
-             "",
-             {
-               timeOut: 8000,
-               closeButton: true,
-               enableHtml: true,
-               toastClass: "alert alert-success alert-with-icon",
-               positionClass: "toast-top-right"
-             }
-           );
-           this._router.navigate([Constants.UrlAllUnits])
+           this._router.navigate([Constants.UrlAllUnits + '/' + Constants.UrlTableOutput])
          } else {
-           this.toastr.info(
-             '<span class="now-ui-icons ui-1_bell-53"></span> ' + res['msg'],
-             "",
-             {
-               timeOut: 8000,
-               closeButton: true,
-               enableHtml: true,
-               toastClass: "alert alert-warning alert-with-icon",
-               positionClass: "toast-top-right"
-             }
-           );
+           alert(res['msg'])
+
          }
       })
   }

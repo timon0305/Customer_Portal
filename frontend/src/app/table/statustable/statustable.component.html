@@ -1,0 +1,57 @@
+<div class="mat-elevation-z0" style="overflow-x: auto;white-space: nowrap;">
+
+  <div class="example-header">
+    <mat-form-field>
+      <input matInput (input)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
+
+  <table mat-table class="full-width-table" matSort aria-label="Elements">
+    <ng-container matColumnDef="plant">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Plant</th>
+      <td mat-cell *matCellDef="let row">{{row.plant}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>State</th>
+      <td mat-cell *matCellDef="let row">{{row.state}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="pv">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+      <td mat-cell *matCellDef="let row">{{row.pv}}W</td>
+    </ng-container>
+
+    <ng-container matColumnDef="storage">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Größe (kWp)</th>
+      <td mat-cell *matCellDef="let row">{{row.storage}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="heading">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Heute (kWh)</th>
+      <td mat-cell *matCellDef="let row">{{row.heading}}W</td>
+    </ng-container>
+
+    <ng-container matColumnDef="otherConsumer">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Gestern (kWh)</th>
+      <td mat-cell *matCellDef="let row">{{row.otherConsumer}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="grid">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>7 Tage (kWh)</th>
+      <td mat-cell *matCellDef="let row">{{row.grid}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator
+                 [length]="dataSource?.data.length"
+                 [pageIndex]="0"
+                 [pageSize]="6"
+  >
+  </mat-paginator>
+  <!-- [pageSizeOptions]="[25, 50, 100, 250]"> -->
+
+</div>

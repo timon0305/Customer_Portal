@@ -1,23 +1,109 @@
 <div class="grid-container">
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{card.title}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+
+  <div class="plant-single-table-header">
+    <h1>
+      <mat-icon>business</mat-icon>
+      Worbis - Ertragsu
+    </h1>
+  </div>
+
+  <div class="plant-single-search-box">
+    <div class="container"
+         fxLayout
+         fxLayout.xs="column"
+         fxLayoutAlign="center"
+         fxLayoutGap="10px"
+         fxLayoutGap.xs="0">
+      <div class="item item-1" fxFlex="30%">
+        <mat-checkbox>today</mat-checkbox>
+      </div>
+      <div class="item item-2" fxFlex="40%">
+        <mat-checkbox >this month</mat-checkbox>
+        <mat-checkbox  >every month</mat-checkbox>
+      </div>
+      <div class="item item-3" fxFlex="30%">
+        <mat-checkbox  >this year</mat-checkbox>
+        <mat-checkbox>every year</mat-checkbox>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="periodOf">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Period Of </th>
+        <td mat-cell *matCellDef="let row"> {{row.periodOf}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="to">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> To </th>
+        <td mat-cell *matCellDef="let row"> {{row.to}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="networkConnectionPointExport">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Network Connection Point Export(kWh) </th>
+        <td mat-cell *matCellDef="let row" [style.color]="row.networkConnectionPointExport"> {{row.networkConnectionPointExport}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="import">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Import(kWh) </th>
+        <td mat-cell *matCellDef="let row"> {{row.import}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="kostalInverters">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Kostal inverters(kWh)  </th>
+        <td mat-cell *matCellDef="let row"> {{row.kostalInverters}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="solarWattStorage">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Solar watt storage(kWh) </th>
+        <td mat-cell *matCellDef="let row" [style.color]="row.solarWattStorage"> {{row.solarWattStorage}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="senecStorageFacility">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Senec storage facility(kWh) </th>
+        <td mat-cell *matCellDef="let row"> {{row.senecStorageFacility}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="consumer">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> consumer(kWh) </th>
+        <td mat-cell *matCellDef="let row"> {{row.consumer}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="specificAnnualYield">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Specific annual yield ((kWh/a)/kWp) </th>
+        <td mat-cell *matCellDef="let row"> {{row.specificAnnualYield}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="download">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Download</th>
+        <td mat-cell *matCellDef="let row" >
+          <button mat-icon-button color="primary">
+            xls
+          </button>
+          <button mat-icon-button color="primary">
+            csv
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+      </tr>
+    </table>
+
+    <mat-paginator
+      #paginator
+      [length]="dataSource?.data.length"
+      [pageIndex]="0"
+      [pageSize]="10"
+      [pageSizeOptions]="[10, 20, 50, 100]"></mat-paginator>
+  </div>
 </div>

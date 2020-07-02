@@ -12,7 +12,7 @@ app.use(cors());
 
 // add routes
 const router = require('./routes/router.js');
-app.use('/api', router);
+app.use('/rest/api', router);
 
 // run server
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

@@ -34,7 +34,7 @@ export class MenuListItemComponent implements OnInit {
 
   ngOnInit() {
     this.navService.currentUrl.subscribe((url: string) => {
-
+    console.log('asdf',url);
       if( ! url ){
         return;
       }
@@ -52,44 +52,6 @@ export class MenuListItemComponent implements OnInit {
 
       //TODO muss nur beim initialen aufmachen von "/" alle anlagen öffnen und eine seite durchrouten
       //TODO das muss direkt über routing redirect passieren
-
-
-   
-      // //all plants
-      // if(this.item.level == 0){
-      //   if (r === 'alle_anlagen'){
-      //     if( url === '/' || ( r === u ))  {
-      //       this.expanded = true;
-      //       console.log('ngOnInit: Show Alle_Anlagen: ' + this.expanded);
-      //     }else{
-      //       this.expanded = false;
-      //     }
-      //     this.ariaExpanded = this.expanded;
-      //     return;
-      //   }
-      // }
-      // if( url === '/' ){
-      //   return;
-      // }
-      // console.log("ngOnInit: level " + this.item.level + " r:" + r + " url:" + url);
-
-      // //single plants
-      // if (r === u){
-      //   this.expanded = true;
-      //   console.log('ngOnInit: Show ' + r + " :" + this.expanded);
-      // }else{
-      //   this.expanded = false;
-      // }
-      // this.ariaExpanded = this.expanded;
-
-      //expand single anlagen
-
-
-      //handle single anlagen      
-/*       console.log(`ngOnInit: expanding alle anlagen, cause checked: '/${this.item.route}' against '${url}'`);
-       this.expanded = true;
-       this.ariaExpanded = this.expanded;
-*/
     });
   }
 

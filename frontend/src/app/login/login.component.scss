@@ -1,7 +1,4 @@
-.item-1 {
-  background-image: url("../../assets/back-log/bg-4.jpg");
-  height: 100vh;
-}
+
 .logo-title {
   margin-top: 30vh;
   padding: 20px;
@@ -21,6 +18,14 @@ mat-icon {
 }
 .login-form button {
   width: 100%;
-  background: #b5ff7c;
+  background: #76cf61;
   border-radius: 10px;
+}
+
+.login-form img {
+  width: 40%;
+  filter: invert(1);
+}
+.login-page>div {
+  height: 100vh;
 }

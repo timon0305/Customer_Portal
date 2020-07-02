@@ -4,7 +4,7 @@ import {NavItem} from '../nav-item';
 
 
 
-export class PlantsData{
+export class MenuNavItems{
 
     public static navItems: NavItem[] = [
         {
@@ -21,7 +21,7 @@ export class PlantsData{
             },
             {
               displayName: 'Ertrag (Diagramme)',
-              iconName: 'equalizer',
+              iconName: 'show_chart',
               route:  Constants.UrlAllUnitsDiagramOutput,
               level: 1,
             },
@@ -33,7 +33,7 @@ export class PlantsData{
             },
             {
               displayName: 'Status (Diagramme)',
-              iconName: 'check',
+              iconName: 'bar_chart',
               route:  Constants.UrlAllUnitsDiagramStatus,
               level: 1,
             }
@@ -41,7 +41,7 @@ export class PlantsData{
         },
         {
           displayName: 'Worbis',
-          iconName: 'business',
+          iconName: 'gavel',
           route: Constants.UrlSingleUnit + '/Worbis',
           level: 0,
           children: [
@@ -53,7 +53,7 @@ export class PlantsData{
             },
             {
               displayName: 'Ertrag (Diagramme)',
-              iconName: 'equalizer',
+              iconName: 'show_chart',
               route:  Constants.UrlSingleUnit + '/Worbis/' + Constants.UrlDiagramOutput,
               level: 1,
             },
@@ -65,7 +65,7 @@ export class PlantsData{
             },
             {
               displayName: 'Status (Diagramme)',
-              iconName: 'check',
+              iconName: 'bar_chart',
               route:  Constants.UrlSingleUnit + '/Worbis/' + Constants.UrlDiagramStatus,
               level: 1,
             }
@@ -73,7 +73,7 @@ export class PlantsData{
         },
         {
             displayName: 'Duderstadt',
-            iconName: 'business',
+            iconName: 'enhanced_encryption',
             route: Constants.UrlSingleUnit + '/Duderstadt',
             level: 0,
             children: [
@@ -85,7 +85,7 @@ export class PlantsData{
               },
               {
                 displayName: 'Ertrag (Diagramme)',
-                iconName: 'equalizer',
+                iconName: 'show_chart',
                 route:  Constants.UrlSingleUnit + '/Duderstadt/' + Constants.UrlDiagramOutput,
                 level: 1,
               },
@@ -97,7 +97,7 @@ export class PlantsData{
               },
               {
                 displayName: 'Status (Diagramme)',
-                iconName: 'check',
+                iconName: 'bar_chart',
                 route:  Constants.UrlSingleUnit + '/Duderstadt/' + Constants.UrlDiagramStatus,
                 level: 1,
               }
@@ -110,31 +110,15 @@ export class PlantsData{
               displayName: 'Einstellungen',
               iconName: 'settings',
               route: Constants.UrlProperties,
-              level: 0
-    /*          ,
-              children: [
-                {
-                  displayName: 'Ebene 1',
-                  iconName: 'star_rate',
-                  route: 'Einstellungen/Ebene1',
-                  level: 1,
-                  children: [
-                    {
-                      displayName: 'Ebene2.1',
-                      iconName: 'star_rate',
-                      route: 'Einstellungen/Ebene1/Ebene2',
-                      level: 2,
-                    },
-                    {
-                      displayName: 'Ebene2.2',
-                      iconName: 'star_rate',
-                      route: 'Einstellungen/Ebene1/Ebene2',
-                      level: 2,
-                    }
-                  ]
-                }
-              ]
-    */
+              level: 0,
+              // children: [
+              //   {
+              //     displayName: 'Ebene 1',
+              //     iconName: 'star_rate',
+              //     route: 'Einstellungen/Ebene1',
+              //     level: 1,
+              //   }
+              // ]
         },
         {
           displayName: 'Hilfe',
@@ -142,6 +126,5 @@ export class PlantsData{
           route: Constants.UrlHelp,
           level: 0
         }
-    
       ];
 }

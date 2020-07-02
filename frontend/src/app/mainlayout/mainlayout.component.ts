@@ -6,7 +6,7 @@ import { Constants } from '../constants';
 import {NavItem} from '../nav-item';
 import {NavService} from '../nav.service';
 import { Title }     from '@angular/platform-browser';
-import { PlantsData } from '../data/plants-data';
+import { MenuNavItems } from '../data/menu-nav-items';
 
 export interface Mainlayout {
     updateTitle(partOfTitle:string);
@@ -22,7 +22,7 @@ export interface Mainlayout {
 })
 export class MainlayoutComponent implements Mainlayout, AfterViewInit, OnInit {
 
-  public navItems: NavItem[] = PlantsData.navItems;
+  public navItems: NavItem[] = MenuNavItems.navItems;
 
   @ViewChild('drawer') drawer: ElementRef;
   
@@ -44,12 +44,17 @@ export class MainlayoutComponent implements Mainlayout, AfterViewInit, OnInit {
     this.navService.drawer = this.drawer;
   }
 
+  token : String;
+  customerId : String;
+
   ngOnInit() {
+    this.token = localStorage.getItem('token');
+    this.customerId = localStorage.getItem('customerId');
+
     this.navService.currentUrl.subscribe((url: string) => {
       if( ! url ){
         return;
       }
-      console.log("MainlayoutComponent: " + url);
       this.updateTitle(null);
     });
   }
@@ -65,8 +70,5 @@ export class MainlayoutComponent implements Mainlayout, AfterViewInit, OnInit {
         this.titleService.setTitle( this.title );
       }
     });
-
   }
-
-
 }

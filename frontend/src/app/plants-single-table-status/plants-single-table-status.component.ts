@@ -1,8 +1,9 @@
-import { Component, AfterViewInit, OnInit } from '@angular/core';
+import {Component, AfterViewInit, OnInit, ChangeDetectorRef} from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { Mainlayout, MainlayoutComponent } from '../mainlayout/mainlayout.component';
 import { Router, ActivatedRoute } from '@angular/router';
+import {MatTableDataSource} from "@angular/material/table";
 
 @Component({
   selector: 'app-plants-single-table-status',
@@ -13,52 +14,47 @@ export class PlantsSingleTableStatusComponent implements AfterViewInit, OnInit {
 
   plantUniqName: string;
   mainlayout: Mainlayout;
-
-  /** Based on the screen size, switch from standard to one column per row */
-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [
-          { title: 'Card 1', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
-          { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
-        ];
-      }
-
-      return [
-        { title: 'Card 1', cols: 2, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 1 },
-        { title: 'Card 3', cols: 1, rows: 2 },
-        { title: 'Card 4', cols: 1, rows: 1 }
-      ];
-    })
-  );
-
   constructor(
               private route: ActivatedRoute,
               private breakpointObserver: BreakpointObserver, 
-              private mainlayoutComp: MainlayoutComponent
+              private mainlayoutComp: MainlayoutComponent,
+              private ref: ChangeDetectorRef
               ) {
       this.mainlayout =  mainlayoutComp;
   }
+  dataSource: MatTableDataSource<UniqStatus>;
 
+  Performances = [
+    {icon: 'check', title: 'Kostal Inverters',status: '15.320'},
+    {icon: 'check', title: 'Senec Store',status: '2.500'},
+    {icon: 'warning', title: 'Solar Watt Storage',status: '2.150'},
+    {icon: 'check', title: 'Consumer',status: '870'},
+    {icon: 'check', title: 'Network Connection Point',status: '10.660'},
+  ];
 
+  data: UniqStatus[]= [];
+  displayedColumns = ['date', 'detail'];
+
+  uniqStatus = [
+    {date: '2020.04.03 14:11', detail: 'Batterietemperatur zu warm Es droht Notabschaltung.\n' +
+        'Service wurde benachrichtigt'},
+    {date: '2020.04.03 17:10', detail: 'Batterietemperature ok'}
+  ];
 
   ngOnInit(): void {
+    // @ts-ignore
+    this.dataSource = new MatTableDataSource(this.uniqStatus);
+    this.ref.detectChanges();
   }
 
   ngAfterViewInit(): void{
-/*    
-    this.route.queryParams.subscribe(params => {
-      console.log("async queryparams " + JSON.stringify(params));
-    });
-*/
-
     this.route.parent.params.subscribe(params => {
         this.plantUniqName=params.uniqname;
         this.mainlayout.updateTitle("Anlage " + this.plantUniqName + " Tabelle Status");
     });
-
   }
+}
+export interface UniqStatus {
+  date: string;
+  detail: string;
 }

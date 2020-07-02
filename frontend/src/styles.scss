@@ -5,6 +5,14 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+div.mat-sort-header-container {
+  justify-content: center!important;
+}
+
+.mat-cell {
+  text-align: center;
+  justify-content:center;
+}
 
 html, body { 
 	height: 100%;
@@ -21,4 +29,30 @@ font-family: Roboto, "Helvetica Neue", sans-serif;
 a {
   text-decoration-color: mat-color($app-primary);
   color: mat-color($app-primary);
+}
+.mat-card-header-text {
+  width: 100%;
+}
+.more-button {
+  float: right;
+}
+.item {
+  margin-top: 20px;
+}
+table {
+  width: 100%;
+}
+
+.mat-header-cell {
+  text-align: center;
+}
+.mat-row:nth-child(even){
+  background-color:#ececec;
+}
+
+.mat-row:nth-child(odd){
+  background-color:white;
+}
+.mat-elevation-z8 {
+  overflow-x: auto;
 }

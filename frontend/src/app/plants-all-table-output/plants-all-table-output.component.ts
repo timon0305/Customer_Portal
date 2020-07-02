@@ -18,15 +18,6 @@ export class PlantsAllTableOutputComponent implements AfterViewInit, OnInit {
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
-      // if (matches) {
-      //   return [ 
-      //     { title: 'Overview', cols: 1, rows: 1},
-      //     { title: 'Card 2', cols: 1, rows: 1 },
-      //     { title: 'Card 3', cols: 1, rows: 1 },
-      //     { title: 'Card 4', cols: 1, rows: 1 }
-      //   ];
-      // }
-
       return [
         { title: 'Anlagenübersicht', cols: 2, rows: 1, dataref: "should load data PlantsAllTableData1 from restservice data/plants-all/table/view1"},
         { title: 'Ertragsübersicht', cols: 2, rows: 1 , dataref: "should load data PlantsAllTableData2 from restservice data/plants-all/table/view2"},
@@ -45,9 +36,12 @@ export class PlantsAllTableOutputComponent implements AfterViewInit, OnInit {
       this.mainlayout =  mainlayoutComp;
   }
 
-
+  token: String;
+  customerId : String;
 
   ngOnInit(): void {
+    this.token = localStorage.getItem('token');
+    this.customerId = localStorage.getItem('customerId');
   }
 
   ngAfterViewInit(): void{
