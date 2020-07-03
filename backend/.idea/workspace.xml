@@ -2,48 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="731b5215-791b-435d-b67c-494ed7ff916c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../frontend/src/app/table/statustable/statustable-datasources.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/app/core/configuration/global-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/core/auth/_services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/core/auth/_services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/data/plants-data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/data/menu-nav-items.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/data/menu-nav-items.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/data/menu-nav-items.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/login/login.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/login/login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/mainlayout/mainlayout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/mainlayout/mainlayout.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/mainlayout/mainlayout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/mainlayout/mainlayout.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/menu-list-item/menu-list-item.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/menu-list-item/menu-list-item.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-all-table-output/plants-all-table-output.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-all-table-output/plants-all-table-output.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-all-diagram-output/plants-all-diagram-output.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-all-diagram-output/plants-all-diagram-output.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-all-diagram-output/plants-all-diagram-output.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-all-diagram-output/plants-all-diagram-output.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-all-diagram-status/plants-all-diagram-status.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-all-diagram-status/plants-all-diagram-status.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-all-diagram-status/plants-all-diagram-status.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-all-diagram-status/plants-all-diagram-status.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-all-table-output/plants-all-table-output.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-all-table-output/plants-all-table-output.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-all-table-status/plants-all-table-status.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-all-table-status/plants-all-table-status.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-all-table-status/plants-all-table-status.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-all-table-status/plants-all-table-status.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-diagram-output/plants-single-diagram-output.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-diagram-output/plants-single-diagram-output.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-diagram-output/plants-single-diagram-output.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-diagram-output/plants-single-diagram-output.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-diagram-status/plants-single-diagram-status.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-diagram-status/plants-single-diagram-status.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-diagram-status/plants-single-diagram-status.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-diagram-status/plants-single-diagram-status.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-table-output/plants-single-table-output.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-table-output/plants-single-table-output.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-table-output/plants-single-table-output.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-table-output/plants-single-table-output.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-table-status/plants-single-table-status.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-table-status/plants-single-table-status.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-table-status/plants-single-table-status.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single/plants-single-table-status/plants-single-table-status.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/table/overviewtable/overviewtable.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/table/overviewtable/overviewtable.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/table/overviewtable/overviewtable.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/table/overviewtable/overviewtable.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/table/overviewtable/overviewtable.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/table/overviewtable/overviewtable.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/logo/logo-mini-2-md.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single-diagram-output/plants-single-diagram-output.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-single-diagram-output/plants-single-diagram-output.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single-diagram-output/plants-single-diagram-output.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-single-diagram-output/plants-single-diagram-output.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single-diagram-status/plants-single-diagram-status.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-single-diagram-status/plants-single-diagram-status.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single-diagram-status/plants-single-diagram-status.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-single-diagram-status/plants-single-diagram-status.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single-table-output/plants-single-table-output.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-single-table-output/plants-single-table-output.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single-table-output/plants-single-table-output.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-single-table-output/plants-single-table-output.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/app/plants-single-table-status/plants-single-table-status.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/plants-single-table-status/plants-single-table-status.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/back-log/bg-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/logo/logo1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/logo/opernikus-logo-600x150-small-green.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -104,22 +89,27 @@
     <session id="259524568">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.0" value="6" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.0" value="7" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="3659" />
-          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="PLAIN_TEXT" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -141,20 +131,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            <state relative-caret-position="154">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+            <state relative-caret-position="770">
+              <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -214,11 +204,11 @@
         <option value="$PROJECT_DIR$/Controller/user.controller.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/middleware/users.js" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/lib/db.js" />
         <option value="$PROJECT_DIR$/model/User.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/router.js" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -236,9 +226,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="903" />
+    <option name="y" value="10" />
     <option name="width" value="976" />
     <option name="height" value="1066" />
   </component>
@@ -285,7 +275,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../React/Yalla-Ward/YaWard/backend" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -343,17 +333,23 @@
       <workItem from="1593494786328" duration="606000" />
       <workItem from="1593530888309" duration="4322000" />
       <workItem from="1593609764314" duration="1206000" />
+      <workItem from="1593677579713" duration="855000" />
+      <workItem from="1593696399102" duration="599000" />
+      <workItem from="1593707184098" duration="1143000" />
+      <workItem from="1593709223204" duration="1437000" />
+      <workItem from="1593777937081" duration="469000" />
+      <workItem from="1593787003840" duration="707000" />
+      <workItem from="1593795132778" duration="21000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77531000" />
+    <option name="totallyTimeSpent" value="82762000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="976" height="1066" extended-state="1" />
-    <editor active="true" />
+    <frame x="903" y="10" width="976" height="1066" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18230277" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18230277" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -366,7 +362,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31243125" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31243125" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -410,10 +406,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/routes/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        <state relative-caret-position="770">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -438,10 +434,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/router.js">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+        <state relative-caret-position="154">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>

@@ -37,6 +37,14 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import { StatustableComponent } from './table/statustable/statustable.component';
 import { PropertyComponent } from './property/property.component';
 import { HelpComponent } from './help/help.component';
+import { BarChartComponent } from './chart/bar-chart/bar-chart.component';
+import {ChartsModule} from "ng2-charts";
+import { DoughnutChartComponent } from './chart/doughnut-chart/doughnut-chart.component';
+import { RadarChartComponent } from './chart/radar-chart/radar-chart.component';
+import { PieChartComponent } from './chart/pie-chart/pie-chart.component';
+import {DatePipe} from '@angular/common';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 //import { Constants } from './constants';
 
 @NgModule({
@@ -56,7 +64,12 @@ import { HelpComponent } from './help/help.component';
     LoginComponent,
     StatustableComponent,
     PropertyComponent,
-    HelpComponent
+    HelpComponent,
+    BarChartComponent,
+    DoughnutChartComponent,
+    RadarChartComponent,
+    PieChartComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,12 +96,12 @@ import { HelpComponent } from './help/help.component';
     MatInputModule,
     MatSortModule,
     MatCheckboxModule,
-//    ,
+    ChartsModule,
     //Constants
   ],
   providers: [
     Title, 
-    NavService, 
+    NavService,
     MainlayoutComponent
   ],
   bootstrap: [AppComponent]

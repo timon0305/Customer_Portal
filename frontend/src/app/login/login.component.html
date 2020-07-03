@@ -7,7 +7,7 @@
        fxLayoutAlign="center"
        fxLayoutGap="0px"
        fxLayoutGap.xs="0">
-    <div class=" item-1" style="background-image: url('../../assets/back-log/bg-4.jpg');" fxFlex="50%">
+    <div class=" item-1" style="background-image: url('../../assets/back-log/opermikus.jpg');" fxFlex="50%">
       <div class="logo-title">
         <h1>Lorem Ipsum</h1>
         <h3>
@@ -18,7 +18,7 @@
     <div class="item item-2" fxFlex="50%">
 
       <div class="login-form">
-        <img src="assets/logo/logo1.png" alt="">
+        <img [src]="href" alt="">
         <form class="login_submit" [formGroup]="login" (ngSubmit)="onSubmit()">
           <mat-form-field class="example-full-width">
             <mat-label>username</mat-label>

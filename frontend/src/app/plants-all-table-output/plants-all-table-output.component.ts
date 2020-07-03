@@ -42,6 +42,7 @@ export class PlantsAllTableOutputComponent implements AfterViewInit, OnInit {
   ngOnInit(): void {
     this.token = localStorage.getItem('token');
     this.customerId = localStorage.getItem('customerId');
+
   }
 
   ngAfterViewInit(): void{

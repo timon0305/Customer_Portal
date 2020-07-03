@@ -1,0 +1,12 @@
+{
+  "opermikus": {
+    "logo": "assets/logo/opermikus.png",
+    "color": "blue",
+    "background": "white"
+  },
+  "apple": {
+    "logo": "assets/logo/apple.png",
+    "color": "red",
+    "background": "blue"
+  }
+}

@@ -1,4 +1,6 @@
 export class Constants {
+    public static readonly URlOpermikus: string             = "opermikus";
+    public static readonly UrlApple: string                 = "apple";
     public static readonly  UrlLogin:string                 = "Login";
     public static readonly UrlAllUnits:string               = "Alle_Anlagen";
     public static readonly UrlSingleUnit:string             = "Anlage";
@@ -10,12 +12,11 @@ export class Constants {
 
     public static readonly UrlProperties:string             = "Einstellungen";
     public static readonly UrlHelp:string                   = "Hilfe";
+    public static readonly UrlLogout: string                = 'Logout';
 
 
     public static readonly UrlAllUnitsTableOutput:string    = Constants.UrlAllUnits +'/' + Constants.UrlTableOutput;
     public static readonly UrlAllUnitsDiagramOutput:string  = Constants.UrlAllUnits +'/' + Constants.UrlDiagramOutput;
     public static readonly UrlAllUnitsTableStatus:string    = Constants.UrlAllUnits +'/' + Constants.UrlTableStatus;
     public static readonly UrlAllUnitsDiagramStatus:string  = Constants.UrlAllUnits +'/' + Constants.UrlDiagramStatus;
-
-
 }

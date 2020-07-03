@@ -11,17 +11,19 @@
     <div class="container"
          fxLayout
          fxLayout.xs="column"
+         fxLayout.lg="row"
+         fxLayout.md="row"
          fxLayoutAlign="center"
          fxLayoutGap="10px"
          fxLayoutGap.xs="0">
-      <div class="item item-1" fxFlex="30%">
-        <mat-checkbox>today</mat-checkbox>
+      <div class="item item-1" fxFlex="30%" fxFlex.md="100%" fxFlex.sm="100%" fxFlex.xs="100%">
+        <mat-checkbox (change)="todayClick($event)">today</mat-checkbox>
       </div>
-      <div class="item item-2" fxFlex="40%">
-        <mat-checkbox >this month</mat-checkbox>
+      <div class="item item-2" fxFlex="40%" fxFlex.md="100%" fxFlex.sm="100%" fxFlex.xs="100%">
+        <mat-checkbox (change)="thisMonthClick($event)">this month</mat-checkbox>
         <mat-checkbox  >every month</mat-checkbox>
       </div>
-      <div class="item item-3" fxFlex="30%">
+      <div class="item item-3" fxFlex="30%" fxFlex.md="100%" fxFlex.sm="100%" fxFlex.xs="100%">
         <mat-checkbox  >this year</mat-checkbox>
         <mat-checkbox>every year</mat-checkbox>
       </div>

@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import {AuthService} from "../core/auth/_services/auth.service";
 import {first} from "rxjs/operators";
 import {Constants} from "../constants";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-login',
@@ -16,21 +17,26 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private userService: AuthService,
     private _router: Router,
+    private http: HttpClient
   ) { }
+  href: string;
 
   login: FormGroup;
   loading = false;
   submitted = false;
   hide = true;
-  ngOnInit(): void {
+
+  ngOnInit() {
     this.login = this.formBuilder.group({
       username: ['', [Validators.required, Validators.minLength(3)]],
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
+    this.href = "assets/logo/" + this._router.url.slice(1) + ".png";
   }
 
   get f() {return this.login.controls}
   onSubmit() {
+
     this.submitted = true;
     if (this.login.invalid) {
       return;

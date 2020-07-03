@@ -15,16 +15,34 @@ import {LoginComponent} from "./login/login.component";
 import {AuthGuard} from "./core/auth/_guard/auth.guard";
 import {PropertyComponent} from "./property/property.component";
 import {HelpComponent} from "./help/help.component";
+import {DashboardComponent} from "./dashboard/dashboard.component";
 
 const routes: Routes = [
+
   {
     path: '',
-    redirectTo : Constants.UrlLogin,
+    redirectTo : Constants.URlOpermikus,
     pathMatch: 'full'
   },
   {
-    path: Constants.UrlLogin,
-    component: LoginComponent
+    path: Constants.URlOpermikus,
+    component: DashboardComponent,
+    children: [
+      {
+        path: '',
+        component: LoginComponent
+      }
+    ]
+  },
+  {
+    path: Constants.UrlApple,
+    component: DashboardComponent,
+    children: [
+      {
+        path: '',
+        component: LoginComponent
+      }
+    ]
   },
   { 
      path: Constants.UrlAllUnits,

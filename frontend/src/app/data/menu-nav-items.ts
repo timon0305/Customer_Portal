@@ -103,28 +103,25 @@ export class MenuNavItems{
               }
             ]
           },
-  
-
-
-            {
-              displayName: 'Einstellungen',
-              iconName: 'settings',
-              route: Constants.UrlProperties,
-              level: 0,
-              // children: [
-              //   {
-              //     displayName: 'Ebene 1',
-              //     iconName: 'star_rate',
-              //     route: 'Einstellungen/Ebene1',
-              //     level: 1,
-              //   }
-              // ]
-        },
-        {
-          displayName: 'Hilfe',
-          iconName: 'help_outline',
-          route: Constants.UrlHelp,
-          level: 0
-        }
+          {
+            displayName: 'Einstellungen',
+            iconName: 'settings',
+            route: Constants.UrlProperties,
+            level: 0,
+            // children: [
+            //   {
+            //     displayName: 'Ebene 1',
+            //     iconName: 'star_rate',
+            //     route: 'Einstellungen/Ebene1',
+            //     level: 1,
+            //   }
+            // ]
+      },
+      {
+        displayName: 'Hilfe',
+        iconName: 'help_outline',
+        route: Constants.UrlHelp,
+        level: 0
+      },
       ];
 }
